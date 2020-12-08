@@ -8,7 +8,7 @@
         <input type="text" name="name" id="name">
       </p>
       <p>
-        <button id="addUser">Add Burger</button>
+        <button id="addBurger">Add Burger</button>
       </p>
     </form>
   </div>
@@ -17,7 +17,7 @@
       <h4>Not Eaten</h4>
       {{#each burgers}}
       {{#unless this.isEaten}}
-      <p class="isHere" data-id="{{this.id}}">{{ this.name }}</p>
+      <p class="isEaten" data-id="{{this.id}}">{{ this.name }}</p>
       {{/unless}}
       {{/each}}
     </div>

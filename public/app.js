@@ -1,7 +1,7 @@
 
-document.getElementById('addUser').addEventListener('click', event => {
+document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
-  axios.post('/api/users', {
+  axios.post('/api/burgers', {
     name: document.getElementById('name').value,
     isHere: false
   })
@@ -10,12 +10,12 @@ document.getElementById('addUser').addEventListener('click', event => {
 })
 
 document.addEventListener('click', event => {
-  if (event.target.className === 'isHere') {
-    axios.put(`/api/users/${event.target.dataset.id}`, { isHere: true })
+  if (event.target.className === 'isEaten') {
+    axios.put(`/api/burgers/${event.target.dataset.id}`, { isEaten: true })
     .then(() => location.reload())
     .catch(err => console.error(err))
   } else if (event.target.className === 'delete') {
-    axios.delete(`/api/users/${event.target.dataset.id}`)
+    axios.delete(`/api/burgers/${event.target.dataset.id}`)
     .then(() => location.reload())
     .catch(err => console.error(err))
   }
