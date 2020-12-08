@@ -3,7 +3,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/burgers', {
     name: document.getElementById('name').value,
-    isHere: false
+    isEaten: false
   })
     .then(() => location.reload())
     .catch(err => console.error(err))
