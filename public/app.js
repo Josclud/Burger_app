@@ -10,7 +10,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
 
 document.addEventListener('click', event => {
   if (event.target.className === 'isEaten') {
-    axios.put(`/api/burgers/${event.target.dataset.id}`, { idEaten: true })
+    axios.put(`/api/burgers/${event.target.dataset.id}`, { isEaten: true })
       .then(() => location.reload())
       .catch(err => console.error(err))
   } else if (event.target.className === 'delete') {
