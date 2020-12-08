@@ -1,21 +1,18 @@
 const router = require('express').Router()
-const user = require('../models/burger.js')
+
+const burger = require('../models/burger.js')
 
 
-router.get('/burgers', (req, res) => 
-  user.getAll(burgers => 
+router.get('/burgers', (req, res) =>
+  burger.selectAll(burgers =>
     res.render('index', { burgers })))
 
-router.post('/burgers', (req, res) => 
-  user.create(req.body, () => 
+router.post('/burgers', (req, res) =>
+  burger.insertOne(req.body, () =>
     res.sendStatus(200)))
 
-router.put('/burgers/:id', (req, res) => 
-  user.update(req.body, req.params.id, () => 
-    res.sendStatus(200)))
-
-router.delete('/burgers/:id', (req, res) => 
-  user.delete(req.params.id, () => 
+router.put('/burgers/:id', (req, res) =>
+  burger.updateOne(req.body, req.params.id, () =>
     res.sendStatus(200)))
 
 module.exports = router
