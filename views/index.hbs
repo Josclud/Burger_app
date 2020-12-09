@@ -1,33 +1,53 @@
-<h1>Burger Eater</h1>
+<body id="page">
 
-<div class="container">
-  <div class="row">
-    <form>
-      <p>
-        <label for="name">Burger:</label>
-        <input type="text" name="name" id="name">
-      </p>
-      <p>
-        <button id="addBurger">Add Burger</button>
-      </p>
-    </form>
+  <div class="mx-auto" style="width: 400px;">
+    <h1>Burger Tracker</h1>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h4>Not Devoured</h4>
-      {{#each burgers}}
-      {{#unless this.devoured}}
-      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
-      {{/unless}}
-      {{/each}}
+  <hr>
+  <div class="container">
+
+    <div class="row">Think you've devoured them all! Well, lets make sure you do. Use this handy app to track your burger eating adventures!
+      <hr>
     </div>
-    <div class="col-md-6">
-      <h4>Devoured</h4>
-      {{#each burgers}}
-      {{#if this.devoured}}
-      <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
-      {{/if}}
-      {{/each}}
+    <div class="row">
+      <div class="col-sm-2">
+
+      </div>
+      <div class="col-sm-7">
+        <form>
+          <p>
+            <label ID="textEntryLable" for="burger">Add burgers here:</label>
+            <input type="text" name="burger" ID="burger">
+            <button id="addBurger">Add Burger</button>
+          </p>
+        </form>
+      </div>
+      <div class="col-sm-1">
+
+      </div>
     </div>
   </div>
-</div>
+  <hr>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Burgers to Devour</h4>
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <p class="devoured" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        {{/unless}}
+        {{/each}}
+      </div>
+      <div class="col-md-6">
+        <h4>Burgers I've Devoured</h4>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <p class="delete" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</body>
+
