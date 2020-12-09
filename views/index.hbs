@@ -16,15 +16,15 @@
     <div class="col-md-6">
       <h4>Not Eaten</h4>
       {{#each burgers}}
-      {{#unless this.isEaten}}
-      <p class="isEaten" data-id="{{this.id}}">{{ this.name }}</p>
+      {{#unless this.devoured}}
+      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
       {{/unless}}
       {{/each}}
     </div>
     <div class="col-md-6">
       <h4>Eaten</h4>
       {{#each burgers}}
-      {{#if this.isEaten}}
+      {{#if this.devoured}}
       <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
       {{/if}}
       {{/each}}
