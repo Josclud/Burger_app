@@ -21,6 +21,8 @@ Learn more about me & my other projects.
 [GitHub](https://github.com/Josclud) 
 [LinkedIn](https://www.linkedin.com/in/joseph-wong-ludwicak/)
 ## <a name="images"></a>Images
-![Screen Shot 2020-12-08 at 7 12 25 PM](https://user-images.githubusercontent.com/68933887/101569485-6d2e8480-3989-11eb-89c2-24fa644ac409.png)
 ![Screen Shot 2020-12-08 at 7 01 34 PM](https://user-images.githubusercontent.com/68933887/101569487-6dc71b00-3989-11eb-9972-0d350ff7f93d.png)
+---
+![Screen Shot 2020-12-08 at 7 12 25 PM](https://user-images.githubusercontent.com/68933887/101569485-6d2e8480-3989-11eb-89c2-24fa644ac409.png)
+
 
