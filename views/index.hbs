@@ -17,7 +17,7 @@
         <form>
           <p>
             <label ID="textEntryLable" for="burger">Add burgers here:</label>
-            <input type="text" name="burger" ID="burger">
+            <input type="text" name="name" ID="name">
             <button id="addBurger">Add Burger</button>
           </p>
         </form>
@@ -35,7 +35,7 @@
         <h4>Burgers to Devour</h4>
         {{#each burgers}}
         {{#unless this.devoured}}
-        <p class="devoured" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
         {{/unless}}
         {{/each}}
       </div>
@@ -43,7 +43,7 @@
         <h4>Burgers I've Devoured</h4>
         {{#each burgers}}
         {{#if this.devoured}}
-        <p class="delete" data-id="{{this.id}}">{{ this.burger_name }}</p>
+        <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
         {{/if}}
         {{/each}}
       </div>
