@@ -1,18 +1,18 @@
 const orm = require('../config/orm.js')
 
-const burger = {
-  getAll(cb) {
-    orm.getAll('burgers', burgers => cb(burgers))
+const user = {
+  getAll (cb) {
+    orm.getAll('users', users => cb(users))
   },
-  create(burger, cb) {
-    orm.create('burgers', burger, () => cb())
+  create (user, cb) {
+    orm.create('users', user, () => cb())
   },
-  update(changes, id, cb) {
-    orm.update('burgers', changes, { id }, () => cb())
+  update (changes, id, cb) {
+    orm.update('users', changes, { id }, () => cb())
   },
-  delete(id, cb) {
-    orm.delete('burgers', { id }, () => cb())
+  delete (id, cb) {
+    orm.delete('users', { id }, () => cb())
   }
 }
 
-module.exports = burger
+module.exports = user

@@ -1,27 +1,26 @@
 {
-  "name": "Burger_app",
+  "name": "01-Sequelize",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Josclud/Burger_app.git"
+    "url": "git+https://github.com/QFults/01-Sequelize.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Josclud/Burger_app/issues"
+    "url": "https://github.com/QFults/01-Sequelize/issues"
   },
-  "homepage": "https://github.com/Josclud/Burger_app#readme",
+  "homepage": "https://github.com/QFults/01-Sequelize#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
-    "handlebars": "^4.7.6",
-    "heroku": "^7.47.4",
     "mysql2": "^2.2.5"
   }
 }
